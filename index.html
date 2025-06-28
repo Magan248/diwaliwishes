@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A Diwali greeting web page made using HTML, CSS and Figma design." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Salsa&family=Style+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Happy Diwali</title>
+  </head>
+  <body>
+        <div class="container">
+    <!-- Hero Section with Diwali message and music -->
+          <section class="hero-section">
+            <img class="jhalar" src="images/jhalar.png" alt="Decorative Jhalar for Diwali" />
+            <div class="pragrap-and-audio">
+              <p>
+                Hi, <span id="receiver"></span><br />
+                You mean the world to me...<br />
+                So this Diwali,<br />
+                I made something for you!
+              </p>
+              <div class="audio-container">
+                <img src="images/icon/music.svg" alt="" aria-label="Play music" />
+                <span class="soulful">&nbsp;&nbsp; Soulful Music </span>
+                <img
+                  class="playing-music"
+                  src="images/icon/Group 5.svg"
+                  alt="Animated icon showing playing music"
+                />
+                <audio
+                  src="images/sitar-and-tanpura-indian-style-bgm-22000.mp3"
+                  controls
+                ></audio>
+              </div>
+            </div>
+            <img class="deepak first-deepak" src="images/deepak 2.png" alt="Lit Deepak lamp for Diwali decoration" />
+            <img
+              class="deepak second-deepak"
+              src="images/deepak 2.png"
+              alt="Lit Deepak lamp for Diwali decoration"
+            />
+          </section>
+          <!-- Lakshmi-Ganesha Section -->
+          <section class="lakshmi-ganesha-section">
+            <div class="horizontal-divider">
+              <div class="horizontal-line"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="horizontal-line"></div>
+            </div>
+            <img
+              class="laxmi-ganesha-img"
+              src="images/lakshmi maa and ganesh ji 1.png"
+              alt="Lakshmi and Ganesha Image"
+            />
+            <h2>Wishing You a Blessed and Prosperous Deepawali</h2>
+            <div class="horizontal-divider">
+              <div class="horizontal-line"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="horizontal-line"></div>
+            </div>
+            <div class="white-card-container">
+              <div class="white-card">
+                <p>People say, “Diwali is the festival of lights.”</p>
+                <p>
+                  You know what, I can feel the positivity and happiness. My goal is
+                  to learn web development and I’m learning everyday, even today!
+                </p>
+              </div>
+              <img
+                class="little-girl"
+                src="images/little-girl 1.png"
+                alt="Little Girl Celebrating Diwali"
+              />
+            </div>
+            <div class="horizontal-divider">
+              <div class="horizontal-line"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="horizontal-line"></div>
+            </div>
+            <div class="lakshmi-ganesha-card">
+              <img src="images/lakshmi.png" alt="lakshmi" />
+              <img src="images/ganesh.png" alt="ganesha" />
+            </div>
+
+                <!-- Thank You Note -->
+            
+            <div class="thank-you-text">
+              <p>Happy Diwali and,</p>
+              <h2>Thank You For Everything...</h2>
+            </div>
+            <p class="my-name">Made with 💜 By <span id="sender"></span></p>
+            <p class="project-description">
+              This is my first web project, built during Diwali to enhance my skills
+              in HTML, CSS, and Netlify deployment. The design was implemented using a
+              Figma file as a reference.
+            </p>
+          </section>
+        </div>  
+          <script>
+            const receiverName = document.querySelector('#receiver')
+            const senderName = document.querySelector('#sender')
+            if (!location.search) {
+              alert("You can personalize this card using ?receiver=YourName&sender=YourName");
+            }
+            receiverName.innerText =
+              new URLSearchParams(location.search).get('receiver') || 'Anaya Singh'
+            senderName.innerText =
+              new URLSearchParams(location.search).get('sender') || 'Magan Singh'
+    </script>
+  </body>
+</html>
